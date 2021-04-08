@@ -1,9 +1,37 @@
 <!DOCTYPE html>
   <html>
   <head>
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   	<title></title>
+  	<style type="text/css">
+  		body{
+    background-image: url('http://i.stack.imgur.com/kx8MT.gif');
+    background-size: cover;
+    
+    
+    
+    height: 100vh;
+    padding:0;
+    margin:0;
+}
+.button {
+  background-color: red; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+  	</style>
   </head>
+  <h1 style="text-align: center;color: blue;">Transfer amount</h1>
   <body>
+  	<div class="container">
+		<div class="jumbotron">
 <?php
 session_start();
 
@@ -82,15 +110,20 @@ $pdo = new PDO("mysql:host=localhost;dbname=people;port=3306",'root','root' );
 
 
 
-<form method='post'>
+<form method='post' style="text-align: center;">
 
 
 <p>Name:<input type='text' name='name' ></p>
-<p>Amount to transfer: <input type='text' name='amt' ></p>
+<br>
+<p>Transfer amount: <input type='text' name='amt' ></p>
+<br>
 <p>Your id:<input type='text' name='id' ></p>
-<input type="Submit" name="submit" value="update">
+<br>
+<input type="Submit" name="submit" value="Transfer" class="button">
 
-<a href="spark.php">cancel</a>
+<a href="spark.php" class="button">cancel</a>
 </form>
+</div>
+</div>
 </body>
 </html>
